@@ -1,0 +1,20 @@
+div {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: .2s;
+    width: 160px;
+    height: 200px;
+}
+div h2 {
+    text-align: center;
+}
+div:hover {
+    transform: scale(1.2);
+}
+div.admin {
+    background-color: darkred;
+}
