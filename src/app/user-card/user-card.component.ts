@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
 import { IUser } from '../user';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 @Component({
@@ -10,6 +10,19 @@ import { IUser } from '../user';
   styleUrl: './user-card.component.css'
 })
 export class UserCardComponent {
+  
   @Input()
   user?: IUser;
+  
+  @Output()
+  onDelete = new EventEmitter<number>();
+  remove() {
+    // how to remove? - No
+    this.onDelete.emit(this.user?.id);
+  }
+  changeRole() {
+    if (this.user)
+      this.user.role = (this.user?.role === "Admin" ? "User" : "Admin");
+  }
+
 }

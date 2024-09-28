@@ -9,8 +9,9 @@
   <app-user-card [user]="users[1]"></app-user-card>
   <app-user-card [user]="users[2]"></app-user-card> -->
   @for (i of users; track $index) {
-  <app-user-card [user]="i"></app-user-card>
+    <app-user-card [user]="i" (onDelete)="deleteItem($event)"></app-user-card>
   }
-  <app-user-card></app-user-card>
-  <app-user-card></app-user-card>
+</div>
+<div>
+  <button (click)="clearAll()">Clear All</button>
 </div>

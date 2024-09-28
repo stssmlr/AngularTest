@@ -3,6 +3,7 @@
         <h2>User Card</h2>
         <p>Name: {{user.name}}</p>
         <p>Email: {{user.email}}</p>
-        <p>Role: {{user.role}}</p>
+        <p>Role: {{user.role}} <button (click)="changeRole()">&lt;&gt;</button></p>
+        <button (click)="remove()">X</button>
     </div>
     }
