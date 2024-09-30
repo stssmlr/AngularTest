@@ -22,7 +22,7 @@ export class UserCardComponent {
   }
   changeRole() {
     if (this.user)
-      this.user.role = (this.user?.role === "Admin" ? "User" : "Admin");
+      this.user.completed = (this.user?.completed === false ? true : false);
   }
 
 }

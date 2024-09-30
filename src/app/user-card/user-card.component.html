@@ -1,9 +1,9 @@
 @if(user) {
-    <div [class.admin]="user.role === 'Admin'">
-        <h2>User Card</h2>
-        <p>Name: {{user.name}}</p>
-        <p>Email: {{user.email}}</p>
-        <p>Role: {{user.role}} <button (click)="changeRole()">&lt;&gt;</button></p>
+    <div [class.admin]="user.completed === false">
+        <h2>TO-Do Card</h2>
+        <p>TO-DO Number : {{user.userId}}</p>
+        <p>Title : {{user.title}}</p>
+        <p>Completed : {{user.completed}} <button (click)="changeRole()">&lt;&gt;</button></p>
         <button (click)="remove()">X</button>
     </div>
     }

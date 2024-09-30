@@ -1,0 +1,10 @@
+<div class="box">
+    @for (i of users; track $index) {
+    <app-user-card [user]="i" (onDelete)="deleteItem($event)"></app-user-card>
+    }
+</div>
+<div>
+    <button (click)="clearAll()">Clear All</button>
+</div>
+<h2>Create New User</h2>
+<app-user-form (onCreate)="createUser($event)"></app-user-form>

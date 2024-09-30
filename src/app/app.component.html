@@ -1,20 +1,4 @@
-<h1>Hello Angular {{title}}</h1>
+<h1 style="text-align: center;">TO-DO LIST</h1>
 
-<p>My name is {{name}}!</p>
 
-<button (click)="changeName()">Change Name</button>
-
-<div>
-  <!-- <app-user-card [user]="users[0]"></app-user-card>
-  <app-user-card [user]="users[1]"></app-user-card>
-  <app-user-card [user]="users[2]"></app-user-card> -->
-  @for (i of users; track $index) {
-    <app-user-card [user]="i" (onDelete)="deleteItem($event)"></app-user-card>
-  }
-</div>
-<div>
-  <button (click)="clearAll()">Clear All</button>
-</div>
-
-<h2>Create New User</h2>
-<app-user-form (onCreate)="createUser($event)"></app-user-form>
+<app-user-list></app-user-list>
